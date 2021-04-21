@@ -11,3 +11,4 @@ K                                  5
 J, X                               8
 Q, Z                               10
 ```
+word class property:  string Played Word; constructor; private property _letterScores; public method WordScore ()
