@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System;
+using System.Linq;
 
 namespace ScrabbleScore.Models
 {
@@ -13,6 +15,14 @@ namespace ScrabbleScore.Models
     }
     public int GetScore()
     {
+      char[] wordArray = PlayedWord.ToCharArray();
+      foreach(char element in wordArray)
+      {
+        if (_scoreOne.Contains(element))
+        {
+          return _wordScores[_scoreOne];
+        }
+      }
       return 0;
     }
   }
